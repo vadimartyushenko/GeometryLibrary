@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GeometryLibrary
+﻿namespace GeometryLibrary
 {
     public class Triangle : IShape
     {
@@ -29,13 +23,12 @@ namespace GeometryLibrary
 
         public double Area()
         {
-            throw new NotImplementedException();
+            var p = (_a + _b + _c) / 2;
+
+            return Math.Sqrt(p * (p - _a) * (p - _b) * (p - _c));
         }
 
-        public string ShapeName()
-        {
-            throw new NotImplementedException();
-        }
+        public string ShapeName() => "Triangle";
 
         private static bool IsValid(double a, double b, double c) => (a + b >= c) && (a + c >= b) && (c + b >= a);
     }

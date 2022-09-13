@@ -1,8 +1,8 @@
 ﻿namespace GeometryLibrary
 {
-    public class Сircle : IShape
+    public class Circle : IShape
     {
-        public Сircle(double radius)
+        public Circle(double radius)
         {
             if (radius < 0)
                 throw new ArgumentException("Radius must not be a negative number!");
