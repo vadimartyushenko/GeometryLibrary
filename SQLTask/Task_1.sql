@@ -35,3 +35,8 @@ insert into dbo.ProductsCategories(ProductId, CategoryId) values (2, 1)
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (3, 2)
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (2, 4)
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (3, 4)
+
+-- SQL запрос для выбора всех пар «Имя продукта – Имя категории»
+select p.ProductName, c.CategoryName from dbo.ProductsCategories pc
+inner join dbo.Category c on c.CategoryId = pc.CategoryId
+right join  dbo.Product p on p.ProductId = pc.ProductId
