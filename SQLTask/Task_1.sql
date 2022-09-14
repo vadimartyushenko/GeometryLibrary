@@ -20,6 +20,7 @@ create table dbo.Category
 insert into dbo.Category(CategoryId, CategoryName) values(1, N'IDE')
 insert into dbo.Category(CategoryId, CategoryName) values(2, N'Profiler')
 insert into dbo.Category(CategoryId, CategoryName) values(3, N'Plugin')
+insert into dbo.Category(CategoryId, CategoryName) values(4, N'.NET Tool')
 
 create table dbo.ProductsCategories
 (
@@ -32,3 +33,5 @@ create table dbo.ProductsCategories
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (1, 1)
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (2, 1)
 insert into dbo.ProductsCategories(ProductId, CategoryId) values (3, 2)
+insert into dbo.ProductsCategories(ProductId, CategoryId) values (2, 4)
+insert into dbo.ProductsCategories(ProductId, CategoryId) values (3, 4)
